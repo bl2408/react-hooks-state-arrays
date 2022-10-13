@@ -21,7 +21,7 @@ function SpicyFoodList() {
     setFilterBy(event.target.value);
   }
 
-  const foodsDisplay = foods.filter(food=> filterBy === "All" ? true : food.cusine === filterBy);
+  const foodsDisplay = foods.filter(food=> filterBy === "All" ? true : food.cuisine === filterBy);
 
   const foodList = foodsDisplay.map((food) => (
     <li key={food.id} onClick={()=>handleLiClick(food.id)}>
@@ -32,7 +32,7 @@ function SpicyFoodList() {
   return (
     <div>
       <button onClick={handleAddFood}>Add New Food</button>
-      <select name="filter" onChange={()=>handleSelectChange(this)}>
+      <select name="filter" onChange={handleSelectChange}>
         <option value="All">All</option>
         <option value="American">American</option>
         <option value="Sichuan">Sichuan</option>

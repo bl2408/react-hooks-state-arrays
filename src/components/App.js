@@ -5,7 +5,7 @@ function App() {
   return (
     <div>
       <h3>SpicyFoodList</h3>
-      {/* <SpicyFoodList /> */}
+      <SpicyFoodList />
     </div>
   );
 }
